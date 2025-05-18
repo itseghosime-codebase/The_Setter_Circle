@@ -5,9 +5,17 @@ import IconHalf from "@/assets/background/icon-half.svg";
 import Image from "next/image";
 import { NumberTicker } from "./magicui/number-ticker";
 import { BlurFade } from "./magicui/blur-fade";
+import { Marquee } from "./magicui/marquee";
+import Logo1 from "@/assets/images/Logo 6.svg";
+import Logo2 from "@/assets/images/Logo 7.svg";
+import Logo3 from "@/assets/images/Logo 8.svg";
+import Logo4 from "@/assets/images/Logo 9.svg";
+import Logo5 from "@/assets/images/Logo 10.svg";
 
 export default function Clients() {
   const [width, setWidth] = React.useState(0);
+
+  const firstRow = [Logo1, Logo2, Logo3, Logo4, Logo5];
 
   React.useEffect(() => {
     // This runs only on the client
@@ -25,7 +33,18 @@ export default function Clients() {
           </h3>
         </BlurFade>
       </section>
-      <section className="bg-black py-10 mt-6"></section>
+      <section className="bg-black py-10 mt-6">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review) => (
+            <Image
+              src={review}
+              alt="Logos"
+              sizes="100%"
+              className="h-12 w-auto mx-14"
+            />
+          ))}
+        </Marquee>
+      </section>
       <div className="relative">
         <section className="relative z-10 container grid md:grid-cols-2 xl:grid-cols-4 lg:gap-16 gap-8 md:gap-14 py-10">
           {Rating.map((items, idx) => (
@@ -43,7 +62,7 @@ export default function Clients() {
               <BlurFade inView delay={0.3 + idx * 0.05} className="text-center">
                 <h3 className="font-semibold text-4xl lg:text-6xl">
                   <NumberTicker className="text-white" value={items.number} />
-                  {items.suffix && items.suffix} 
+                  {items.suffix && items.suffix}
                 </h3>
                 <p className="font-normal max-w-3xs md:text-lg">
                   {items.description}
