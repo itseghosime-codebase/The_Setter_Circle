@@ -1,15 +1,20 @@
 import React from "react";
+import { BlurFade } from "./magicui/blur-fade";
 
 export default function Works() {
   return (
     <div id="works">
       <div className="container text-center py-14">
-        <h3 className="text-3xl md:text-5xl font-semibold underline decoration-primary decoration-1 underline-offset-[16px]">
-          How it works
-        </h3>
+        <BlurFade inView>
+          <h3 className="text-3xl md:text-5xl font-semibold underline decoration-primary decoration-1 underline-offset-[16px]">
+            How it works
+          </h3>
+        </BlurFade>
         <section className="grid lg:grid-cols-2 items-center justify-center gap-8 mt-14">
           {HowItWorks.map((items, index) => (
-            <div
+            <BlurFade
+              inView
+              delay={0.25 + index * 0.05}
               key={index}
               className={`border ${
                 HowItWorks.length - 1 === index
@@ -26,9 +31,8 @@ export default function Works() {
                 </h4>
                 <p className="text-sm md:text-base">{items.description}</p>
               </div>
-            </div>
+            </BlurFade>
           ))}
-          
         </section>
       </div>
     </div>

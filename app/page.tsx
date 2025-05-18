@@ -15,7 +15,7 @@ export default function Home() {
         <Clients />
         <div className="bg-[#040404]">
           <Why />
-        <Faq />
+          <Faq />
         </div>
       </div>
       <Image
