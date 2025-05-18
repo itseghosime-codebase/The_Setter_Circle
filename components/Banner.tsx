@@ -9,7 +9,7 @@ import { BlurFade } from "./magicui/blur-fade";
 export default function Banner() {
   return (
     <div className="relative">
-      <div className="container max-w-4xl pt-40 pb-20 lg:min-h-[700px] flex items-center justify-center relative z-10">
+      <div className="container max-w-4xl pt-40 pb-20 lg:min-h-[800px] flex items-center justify-center relative z-10">
         <section className="text-center space-y-3">
           <BlurFade inView>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-mono font-normal text-primary">
@@ -31,7 +31,7 @@ export default function Banner() {
           </BlurFade>
 
           <div className="flex flex-col md:flex-row items-center gap-5 justify-center">
-            <BlurFade delay={0.6} inView>
+            <BlurFade delay={0.6} className="w-full md:w-fit" inView>
               <Link
                 href={""}
                 className="py-4 px-12 w-full md:w-fit rounded-full inline-block text-lg bg-primary text-black font-medium"
@@ -39,7 +39,7 @@ export default function Banner() {
                 <span>Apply now</span>
               </Link>
             </BlurFade>
-            <BlurFade delay={0.75} inView>
+            <BlurFade className="w-full md:w-fit" delay={0.75} inView>
               <Link
                 href={""}
                 className="py-4 px-12 w-full md:w-fit rounded-full inline-block text-lg bg-primary/15 border border-primary text-primary font-medium"

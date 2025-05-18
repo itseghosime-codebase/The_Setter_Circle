@@ -35,8 +35,9 @@ export default function Clients() {
       </section>
       <section className="bg-black py-10 mt-6">
         <Marquee pauseOnHover className="[--duration:20s]">
-          {firstRow.map((review) => (
+          {firstRow.map((review, idx) => (
             <Image
+              key={idx}
               src={review}
               alt="Logos"
               sizes="100%"
