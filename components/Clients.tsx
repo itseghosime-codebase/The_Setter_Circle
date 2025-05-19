@@ -47,7 +47,7 @@ export default function Clients() {
         </Marquee>
       </section>
       <div className="relative">
-        <section className="relative z-10 container grid md:grid-cols-2 xl:grid-cols-4 lg:gap-16 gap-8 md:gap-14 py-10">
+        <section className="relative z-10 container grid md:grid-cols-3 lg:gap-16 gap-8 md:gap-14 py-10">
           {Rating.map((items, idx) => (
             <div
               key={idx}
@@ -62,7 +62,8 @@ export default function Clients() {
               )}
               <BlurFade inView delay={0.3 + idx * 0.05} className="text-center">
                 <h3 className="font-semibold text-4xl lg:text-6xl">
-                  <NumberTicker className="text-white" value={items.number} />
+                  {items.prefix && items.prefix}
+                  <NumberTicker className="text-white" value={items.number} decimalPlaces={items.prefix ? 1 : 0} />
                   {items.suffix && items.suffix}
                 </h3>
                 <p className="font-normal max-w-3xs md:text-lg">
@@ -86,21 +87,19 @@ export default function Clients() {
 
 const Rating = [
   {
-    number: 25,
-    suffix: "K+",
-    description: "Sales Generated Through DM Setters",
-  },
-  {
-    number: 3,
-    suffix: "M+",
-    description: "Sales Generated Through DM Setters",
-  },
-  {
-    number: 40,
-    description: "Sales Generated Through DM Setters",
+    prefix: '£',
+    number: 1.8,
+    suffix: "+",
+    description: "Million generated in sales through DM setting",
   },
   {
     number: 100,
-    description: "Sales Generated Through DM Setters",
+    suffix: "%",
+    description: "Proven results INSTANTLY ",
   },
+  {
+    number: 30,
+    suffix: '+',
+    description: "Calls booked per month",
+  }
 ];
