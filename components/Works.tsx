@@ -16,10 +16,11 @@ export default function Works() {
               inView
               delay={0.25 + index * 0.05}
               key={index}
-              className={`relative w-full ${HowItWorks.length - 1 === index
+              className={`relative w-full ${
+                HowItWorks.length - 1 === index
                   ? " last:lg:col-span-2 last:justify-self-center"
                   : ""
-                } rounded-4xl after:absolute after:h-full after:w-1/6 after:right-0 after:top-0 after:rounded-r-4xl after:border-r after:border-y after:border-primary max-w-lg h-full before:absolute before:h-full before:w-1/6 before:left-0 before:top-0 before:rounded-l-4xl before:border-l before:border-y before:border-primary`}
+              } rounded-4xl after:absolute after:h-full after:w-1/6 after:right-0 after:top-0 after:rounded-r-4xl after:border-r after:border-y after:border-primary max-w-lg h-full before:absolute before:h-full before:w-1/6 before:left-0 before:top-0 before:rounded-l-4xl before:border-l before:border-y before:border-primary`}
             >
               <div className="space-y-2 bg-gradient-to-r via-primary/15 py-10 px-5 h-full relative z-10">
                 <div className="bg-primary rounded-full flex items-center justify-center mx-auto font-mono h-11 w-11 text-xl font-semibold text-black ">

@@ -4,11 +4,13 @@ import { FaPhone } from "react-icons/fa";
 import { IoMdChatbubbles } from "react-icons/io";
 import { RiPrinterFill } from "react-icons/ri";
 import { BlurFade } from "./magicui/blur-fade";
+import LayerBlur from "@/assets/background/layer-blur-2.svg";
+import Image from "next/image";
 
 export default function Why() {
   return (
-    <div id="why">
-      <div className="container py-20">
+    <div id="why" className="relative z-10">
+      <div className="container relative z-10 py-20">
         <div className="grid md:grid-cols-5 gap-10 items-center">
           <section className="md:col-span-3 space-y-5">
             <BlurFade inView>
@@ -61,6 +63,12 @@ export default function Why() {
           </section>
         </div>
       </div>
+      <Image
+        src={LayerBlur}
+        alt="Logo Icon"
+        sizes="100%"
+        className="absolute z-0 -bottom-[60%] -right-[25%] opacity-75"
+      />
     </div>
   );
 }
