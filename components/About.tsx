@@ -48,7 +48,7 @@ export default function About() {
               delay={0.5}
               className="py-4 px-12 w-full mx-auto max-w-2xs text-center rounded-xl text-xl bg-primary/10 border border-primary text-primary font-medium font-mont"
             >
-              <h6 className="text-lg">Josh Lee</h6>
+              <h6 className="text-lg">Josh McKee</h6>
               <p className="text-xs text-white">Founder</p>
             </BlurFade>
           </section>
