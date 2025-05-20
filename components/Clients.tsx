@@ -5,12 +5,12 @@ import IconHalf from "@/assets/background/icon-half.svg";
 import Image from "next/image";
 import { NumberTicker } from "./magicui/number-ticker";
 import { BlurFade } from "./magicui/blur-fade";
-import { Marquee } from "./magicui/marquee";
 import Logo1 from "@/assets/images/Logo 6.svg";
 import Logo2 from "@/assets/images/Logo 7.svg";
 import Logo3 from "@/assets/images/Logo 8.svg";
 import Logo4 from "@/assets/images/Logo 9.svg";
 import Logo5 from "@/assets/images/Logo 10.svg";
+import LayerBlur from "@/assets/background/layer-blur-2.svg";
 
 export default function Clients() {
   const [width, setWidth] = React.useState(0);
@@ -33,20 +33,7 @@ export default function Clients() {
           </h3>
         </BlurFade>
       </section>
-      <section className="bg-black py-10 mt-6">
-        <Marquee pauseOnHover className="[--duration:20s]">
-          {firstRow.map((review, idx) => (
-            <Image
-              key={idx}
-              src={review}
-              alt="Logos"
-              sizes="100%"
-              className="h-12 w-auto mx-14"
-            />
-          ))}
-        </Marquee>
-      </section>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <section className="relative z-10 container grid md:grid-cols-3 lg:gap-16 gap-8 md:gap-14 py-10">
           {Rating.map((items, idx) => (
             <div
@@ -61,9 +48,13 @@ export default function Clients() {
                 <div className="h-32 hidden w-[1.05px] bg-gradient-to-b from-primary/0 via-primary to-primary/0 from-25% via-55% to-85% " />
               )}
               <BlurFade inView delay={0.3 + idx * 0.05} className="text-center">
-                <h3 className="font-semibold text-4xl lg:text-6xl">
+                <h3 className="font-semibold text-4xl lg:text-6xl text-primary">
                   {items.prefix && items.prefix}
-                  <NumberTicker className="text-white" value={items.number} decimalPlaces={items.prefix ? 1 : 0} />
+                  <NumberTicker
+                    className="text-primary"
+                    value={items.number}
+                    decimalPlaces={items.prefix ? 1 : 0}
+                  />
                   {items.suffix && items.suffix}
                 </h3>
                 <p className="font-normal max-w-3xs md:text-lg">
@@ -80,6 +71,12 @@ export default function Clients() {
           fill
           className="w-full h-full object-top object-cover"
         />
+        <Image
+          src={LayerBlur}
+          alt="Logo Icon"
+          sizes="100%"
+          className="absolute z-0 -top-[54%] opacity-75"
+        />
       </div>
     </div>
   );
@@ -87,7 +84,7 @@ export default function Clients() {
 
 const Rating = [
   {
-    prefix: '£',
+    prefix: "£",
     number: 1.8,
     suffix: "+",
     description: "Million generated in sales through DM setting",
@@ -99,7 +96,7 @@ const Rating = [
   },
   {
     number: 30,
-    suffix: '+',
+    suffix: "+",
     description: "Calls booked per month",
-  }
+  },
 ];
