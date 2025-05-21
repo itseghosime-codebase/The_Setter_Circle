@@ -4,7 +4,7 @@ import { BlurFade } from "./magicui/blur-fade";
 
 export default function About() {
   return (
-    <div id="about" className="py-20 bg-black relative z-10">
+    <div id="about" className="py-20 bg-[#0C0C0C] relative z-10">
       <div className="container">
         <div className="grid md:grid-cols-5 items-center gap-10 lg:gap-20 w-full">
           <section className="md:col-span-3 space-y-5">

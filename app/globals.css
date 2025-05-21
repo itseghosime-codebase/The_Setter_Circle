@@ -136,7 +136,7 @@
     @apply border-border outline-ring/50 scroll-smooth;
   }
   body {
-    @apply bg-[#181818] text-white;
+    @apply bg-black text-white;
   }
 }
 

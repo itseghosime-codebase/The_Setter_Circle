@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import LogoIcon from "@/assets/background/icon.svg";
+import LogoIcon from "@/assets/background/BG.webp";
 import LayerBlur from "@/assets/background/layer-blur.svg";
 import About from "./About";
 import { BlurFade } from "./magicui/blur-fade";
@@ -62,7 +62,7 @@ export default function Banner() {
         alt="Logo Icon"
         sizes="100%"
         fill
-        className="h-full w-full absolute z-[5] object-cover md:object-contain object-center"
+        className="h-full w-full absolute z-[5] inset-0 object-cover object-center-right"
       />
     </div>
   );

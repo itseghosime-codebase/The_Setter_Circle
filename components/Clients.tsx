@@ -1,21 +1,15 @@
 "use client";
 
 import React from "react";
-import IconHalf from "@/assets/background/icon-half.svg";
 import Image from "next/image";
 import { NumberTicker } from "./magicui/number-ticker";
 import { BlurFade } from "./magicui/blur-fade";
-import Logo1 from "@/assets/images/Logo 6.svg";
-import Logo2 from "@/assets/images/Logo 7.svg";
-import Logo3 from "@/assets/images/Logo 8.svg";
-import Logo4 from "@/assets/images/Logo 9.svg";
-import Logo5 from "@/assets/images/Logo 10.svg";
-import LayerBlur from "@/assets/background/layer-blur-2.svg";
+import Lumina from "@/assets/images/Lumina.svg";
+import FdaImage from "@/assets/images/fda.svg";
+import LayerBlur from '@/assets/background/layer-blur.svg'
 
 export default function Clients() {
   const [width, setWidth] = React.useState(0);
-
-  const firstRow = [Logo1, Logo2, Logo3, Logo4, Logo5];
 
   React.useEffect(() => {
     // This runs only on the client
@@ -24,7 +18,7 @@ export default function Clients() {
   const nummber = width < 1100 ? 2 : 4;
 
   return (
-    <div id="clients" className="pt-20">
+    <div id="clients" className="py-20">
       <section className="container">
         <BlurFade inView>
           <h3 className="text-2xl md:text-3xl font-semibold text-primary text-center">
@@ -64,19 +58,42 @@ export default function Clients() {
             </div>
           ))}
         </section>
-        <Image
-          src={IconHalf}
-          alt="Icon Half"
-          sizes="100%"
-          fill
-          className="w-full h-full object-top object-cover"
-        />
+        <section className="container">
+          <div className="grid md:grid-cols-2 gap-5">
+            <BlurFade
+              delay={0.2}
+              inView
+              className="py-3 pb-6 px-12 w-full mx-auto text-center rounded-lg text-base bg-primary/10 border border-primary text-white font-normal font-sans flex flex-col items-center justify-center"
+            >
+              <Image
+                src={FdaImage}
+                alt="Logo Icon"
+                sizes="100%"
+                className="h-14 w-auto"
+              />
+              <p className="text-sm shrink-0">7 Million Amazon Coaching Business</p>
+            </BlurFade>
+            <BlurFade
+              delay={0.5}
+              inView
+              className="py-4 w-full mx-auto text-center rounded-lg text-base bg-primary/10 border border-primary text-white gap-2 font-normal font-sans flex flex-col items-center justify-center"
+            >
+              <Image
+                src={Lumina}
+                alt="Logo Icon"
+                sizes="100%"
+                className="h-8 w-auto"
+              />
+              <p className="text-sm shrink-0">Lumina | Crypto Marketing Firm</p>
+            </BlurFade>
+          </div>
+        </section>
         <Image
           src={LayerBlur}
           alt="Logo Icon"
           sizes="100%"
-          className="absolute z-0 -top-[54%] opacity-75"
-        />
+          className="absolute z-0 bottom-0 opacity-75"
+        /> 
       </div>
     </div>
   );

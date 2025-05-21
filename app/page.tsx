@@ -5,14 +5,24 @@ import Why from "@/components/Why";
 import Works from "@/components/Works";
 import Image from "next/image";
 import Background from "@/assets/background/Textures.webp";
+import Background2 from "@/assets/background/bg-below.webp";
 
 export default function Home() {
   return (
     <main className="relative">
       <div className="relative z-10">
         <Banner />
-        <Works />
-        <Clients />
+       <div className="relative z-10">
+       <Works />
+       <Clients />
+        <Image
+               src={Background2}
+               alt="Background"
+               sizes="100%"
+               fill
+               className="h-full w-full absolute z-[5] inset-0 object-center object-center"
+             />
+       </div>
         <div className="bg-[#040404]">
           <Why />
           <Faq />
