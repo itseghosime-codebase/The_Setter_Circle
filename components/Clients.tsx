@@ -71,7 +71,7 @@ export default function Clients() {
                 sizes="100%"
                 className="h-14 w-auto"
               />
-              <p className="text-sm shrink-0">7 Million Amazon Coaching Business</p>
+              <p className="text-sm shrink-0">7 figure Amazon coaching business</p>
             </BlurFade>
             <BlurFade
               delay={0.5}
