@@ -58,7 +58,13 @@ export default function Clients() {
             </div>
           ))}
         </section>
-        <section className="container">
+        <section className="container mt-20 space-y-6"> 
+          <BlurFade inView>
+          <h4 className="text-center text-2xl md:text-3xl font-semibold text-white pb-5">
+          Clients worked with
+          </h4>
+        </BlurFade>
+
           <div className="grid md:grid-cols-2 gap-5">
             <BlurFade
               delay={0.2}
@@ -93,7 +99,7 @@ export default function Clients() {
           alt="Logo Icon"
           sizes="100%"
           className="absolute z-0 bottom-0 opacity-75"
-        /> 
+        />
       </div>
     </div>
   );
