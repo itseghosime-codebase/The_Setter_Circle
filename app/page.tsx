@@ -9,7 +9,7 @@ import Background2 from "@/assets/background/bg-below.webp";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative w-screen overflow-x-hidden">
       <div className="relative z-10">
         <Banner />
        <div className="relative z-10">
