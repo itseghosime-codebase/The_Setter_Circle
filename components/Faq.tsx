@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import {
   Accordion,
@@ -9,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import IconHalf from "@/assets/background/icon-half.svg";
 import { BlurFade } from "./magicui/blur-fade";
+import { InlineWidget } from "react-calendly";
 
 export default function Faq() {
   return (
@@ -40,6 +42,7 @@ export default function Faq() {
           </Accordion>
         </section>
         <section className="my-10 bg-[#0B0B0B] py-14 px-6 md:px-14 rounded-2xl relative overflow-hidden">
+          <div className="grid md:grid-cols-2 items-center gap-5  relative z-20 ">
           <div className="max-w-md space-y-2">
             <BlurFade inView delay={0.25}>
               <h4 className="text-2xl md:text-3xl font-semibold text-primary">
@@ -63,11 +66,24 @@ export default function Faq() {
               </Link>
             </BlurFade>
           </div>
+          <div className="rounded-lg max-h-[550px] bg-[#0E0E0E] overflow-hidden">
+          <InlineWidget
+            url="https://calendly.com/thesettercircle/the-setter-circle"
+            pageSettings={{
+              backgroundColor: "#0E0E0E",
+              textColor: "#ffffff",
+              primaryColor: "#FB7F73",
+              hideEventTypeDetails: true,
+              hideLandingPageDetails: true,
+            }}
+          />
+        </div>
+          </div>
           <Image
             src={IconHalf}
             alt="Icon Half"
             sizes="100%"
-            className="w-full h-full object-top object-cover absolute -right-1/4 top-0"
+            className="w-full h-full object-top object-cover absolute z-0 -right-1/4 top-0"
           />
         </section>
       </div>
