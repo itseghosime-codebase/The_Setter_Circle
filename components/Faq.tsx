@@ -74,7 +74,6 @@ export default function Faq() {
               textColor: "#ffffff",
               primaryColor: "#FB7F73",
               hideEventTypeDetails: true,
-              hideLandingPageDetails: true,
             }}
           />
         </div>
