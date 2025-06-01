@@ -68,7 +68,7 @@ export default function Faq() {
             </div>
             <div className="rounded-lg max-h-[550px] bg-[#0E0E0E] overflow-hidden">
               <InlineWidget
-                url="https://calendly.com/thesettercircle/the-setter-circle"
+                url="https://calendly.com/josh-thesettercircle"
                 pageSettings={{
                   backgroundColor: "#0E0E0E",
                   textColor: "#ffffff",
