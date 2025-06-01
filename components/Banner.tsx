@@ -33,7 +33,7 @@ export default function Banner() {
           <div className="flex flex-col md:flex-row items-center gap-5 justify-center">
             <BlurFade delay={0.6} className="w-full md:w-fit" inView>
               <Link
-                href={""}
+                href={"#bookings"}
                 className="py-4 px-12 w-full md:w-fit rounded-full inline-block text-lg bg-primary text-black font-medium"
               >
                 <span>Apply now</span>
@@ -41,7 +41,7 @@ export default function Banner() {
             </BlurFade>
             <BlurFade className="w-full md:w-fit" delay={0.75} inView>
               <Link
-                href={""}
+                href={"#about"}
                 className="py-4 px-12 w-full md:w-fit rounded-full inline-block text-lg bg-primary/15 border border-primary text-primary font-medium"
               >
                 <span>Learn more</span>

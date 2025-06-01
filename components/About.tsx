@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { BlurFade } from "./magicui/blur-fade";
+import Image from "next/image";
+import Profile from "@/assets/images/profile.svg";
 
 export default function About() {
   return (
@@ -28,7 +30,7 @@ export default function About() {
 
             <BlurFade delay={0.5} inView>
               <Link
-                href={""}
+                href={"#bookings"}
                 className="py-4 px-12 rounded-full inline-block text-sm bg-primary text-black font-medium"
               >
                 <span>Start your journey with us</span>
@@ -39,9 +41,14 @@ export default function About() {
             <BlurFade
               inView
               delay={0.25}
-              className="border-4 w-full mx-auto max-w-2xs rounded-3xl border-primary bg-[#1c1c1c] h-80 relative"
+              className="border-4 overflow-hidden w-full mx-auto max-w-2xs rounded-3xl border-primary bg-[#1c1c1c] h-80 relative"
             >
-              '
+              <Image
+                src={Profile}
+                alt="Profile Image"
+                sizes="100%"
+                className="h-full w-full object-center object-cover"
+              />
             </BlurFade>
             <BlurFade
               inView

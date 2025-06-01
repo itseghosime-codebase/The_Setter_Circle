@@ -85,7 +85,8 @@ export default function Navbar() {
           </li>
           <li className="w-full lg:w-fit">
             <Link
-              href={""}
+              href={"#bookings"}
+              onClick={() => setClicked(true)}
               className="py-3 px-10 rounded-md mt-5 lg:mt-0 block text-center lg:inline-block text-base bg-primary text-black font-medium"
             >
               <span>Get started</span>

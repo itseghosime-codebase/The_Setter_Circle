@@ -41,42 +41,42 @@ export default function Faq() {
             ))}
           </Accordion>
         </section>
-        <section className="my-10 bg-[#0B0B0B] py-14 px-6 md:px-14 rounded-2xl relative overflow-hidden">
+        <section id="bookings" className="my-10 bg-[#0B0B0B] py-14 px-6 md:px-14 rounded-2xl relative overflow-hidden">
           <div className="grid md:grid-cols-2 items-center gap-5  relative z-20 ">
-          <div className="max-w-md space-y-2">
-            <BlurFade inView delay={0.25}>
-              <h4 className="text-2xl md:text-3xl font-semibold text-primary">
-                Ready to Plug DM Setters Into Your Business?
-              </h4>
-            </BlurFade>
-            <BlurFade inView delay={0.5}>
-              {" "}
-              <p className="text-sm md:text-lg">
-                Let’s fill your calendar and your pipeline — without the
-                headaches.
-              </p>
-            </BlurFade>
+            <div className="max-w-md space-y-2">
+              <BlurFade inView delay={0.25}>
+                <h4 className="text-2xl md:text-3xl font-semibold text-primary">
+                  Ready to Plug DM Setters Into Your Business?
+                </h4>
+              </BlurFade>
+              <BlurFade inView delay={0.5}>
+                {" "}
+                <p className="text-sm md:text-lg">
+                  Let’s fill your calendar and your pipeline — without the
+                  headaches.
+                </p>
+              </BlurFade>
 
-            <BlurFade inView delay={0.75}>
-              <Link
-                href={""}
-                className="py-4 px-12 rounded-full inline-block text-sm bg-primary text-black font-medium"
-              >
-                <span>Book a free call</span>
-              </Link>
-            </BlurFade>
-          </div>
-          <div className="rounded-lg max-h-[550px] bg-[#0E0E0E] overflow-hidden">
-          <InlineWidget
-            url="https://calendly.com/thesettercircle/the-setter-circle"
-            pageSettings={{
-              backgroundColor: "#0E0E0E",
-              textColor: "#ffffff",
-              primaryColor: "#FB7F73",
-              hideEventTypeDetails: true,
-            }}
-          />
-        </div>
+              <BlurFade inView delay={0.75}>
+                <Link
+                  href={"#bookings"}
+                  className="py-4 px-12 rounded-full inline-block text-sm bg-primary text-black font-medium"
+                >
+                  <span>Book a free call</span>
+                </Link>
+              </BlurFade>
+            </div>
+            <div className="rounded-lg max-h-[550px] bg-[#0E0E0E] overflow-hidden">
+              <InlineWidget
+                url="https://calendly.com/thesettercircle/the-setter-circle"
+                pageSettings={{
+                  backgroundColor: "#0E0E0E",
+                  textColor: "#ffffff",
+                  primaryColor: "#FB7F73",
+                  hideEventTypeDetails: true,
+                }}
+              />
+            </div>
           </div>
           <Image
             src={IconHalf}
