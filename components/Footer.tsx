@@ -3,8 +3,8 @@ import Logo from "@/assets/images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa";
-import { RiWhatsappFill } from "react-icons/ri";
-import { FaTwitter } from "react-icons/fa6";
+// import { FaTwitter } from "react-icons/fa6";
+import { AiFillInstagram } from "react-icons/ai";
 
 export default function Footer() {
   return (
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center justify-center gap-6 md:gap-4 text-2xl">
           <Link
-            href={""}
+            href={"https://www.linkedin.com/in/josh-mckee-b45349364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"}
             target="_blank"
             className="text-black bg-primary rounded-md inline-block"
           >
@@ -39,7 +39,7 @@ export default function Footer() {
               <FaLinkedinIn />
             </span>
           </Link>
-          <Link
+          {/* <Link
             href={""}
             target="_blank"
             className="text-black bg-primary rounded-md inline-block"
@@ -47,14 +47,14 @@ export default function Footer() {
             <span className="h-10 w-10 flex items-center justify-center">
               <FaTwitter />
             </span>
-          </Link>
+          </Link> */}
           <Link
-            href={""}
+            href={"https://www.instagram.com/the_setter_circle?igsh=a3lpZ3doM2d1cWFm&utm_source=qr"}
             target="_blank"
             className="text-black bg-primary rounded-md inline-block"
           >
             <span className="h-10 w-10 flex items-center justify-center">
-              <RiWhatsappFill />
+            <AiFillInstagram />
             </span>
           </Link>
         </div>
